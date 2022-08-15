@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../.vscode/a/lib/jquery.js"></script>
+</head>
+<body>
+    <div style="background-color: pink;" id="container">123</div>
+    <button type="button" id="hide">隐藏</button>
+    <button type="button" id="display">显示</button>
+    <button type="button" id="clear">显示/隐藏</button>
+    <button type="button" id="reset">淡出效果</button>
+    <button type="button" id="show">淡出可见元素</button>
+    <script>
+        $(function(){
+            $('#hide').click(function(){
+                $('#container').hide();
+            })
+        });
+
+        $(function(){
+            $('#display').click(function(){
+                $('#container').show();
+            })
+        })
+        $(function(){
+            $('#clear').click(function(){
+                $('#container').toggle();
+            });
+        })
+        $(function(){
+            $('#reset').click(function(){
+                $('#container').fadeIn(3000);
+            });
+               
+        });
+        $(function(){
+            $('#show').click(function(){
+                $('#container').fadeOut(3000);
+            });
+        })
+        
+        
+    </script>
+</body>
+</html>
